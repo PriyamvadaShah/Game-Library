@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    opacity: 100%;
+    background: #000;
+  }
+
+
+  #aaa{
+    opacity: 50%;
+    height:100vh;
+    top:0vh;
+  }

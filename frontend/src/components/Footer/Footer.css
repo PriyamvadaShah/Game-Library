@@ -1,0 +1,15 @@
+.footer{
+    position: absolute;
+    top:490vh;
+    left:-2rem;
+    right:-2rem;
+    bottom:0vh;
+    margin-left:0rem;
+    margin-right:0rem;
+    padding-left:0rem;
+    padding-right:0rem;
+}
+footer{
+    background-color: rgb(8, 8, 41);
+}
+

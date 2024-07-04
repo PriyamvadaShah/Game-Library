@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ :root {
+    --bg: #222;
+    --clr: #fff;
+ }
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg);
+    opacity: 100%;
+    width:100%;
+    
+ }
+ #logo{
+   color: #ffd900;
+   font-size: 2rem;
+   line-height: 5rem;
+   font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+ }
+ #ul {
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    z-index: 5;
+    position: fixed;
+    background-color: #222;
+    height:5rem;
+    opacity: 100%;
+ }
+ #ul li {
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+ }
+ #ul li::before {
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--clr),
+                0 0 0 20px var(--bg),
+                0 0 0 22px var(--clr);
+    transition: 0.5s;
+ }
+ #ul li:hover::before {
+    inset: 15px;
+ }
+ #ul li::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    transform: rotate(45deg);
+    transition: 0.5s;
+ }
+ #ul li:hover::after {
+    inset: 0px;
+    transform: rotate(0deg);
+ }
+ #ul li a {
+    position: relative;
+    text-decoration: none;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ #ul li a i {
+    font-size: 2em;
+    transition: 0.5s;
+    color: var(--clr);
+    opacity: 1;
+ }
+ #ul li:hover a i {
+    color: var(--clr);
+    transform: translateY(-40%);
+ }
+ #ul li a span {
+    position: absolute;
+    font-family: sans-serif;
+    color: var(--clr);
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(0) translateY(200%);
+ }
+ #ul li:hover a span {
+    opacity: 1;
+    transform: scale(1) translateY(100%);
+ }
+ #ul li:hover a i,
+ #ul li a span {
+    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
+ }
+
+ #Signup{
+    background-color: rgb(65, 67, 180);
+    color:white;
+    margin-top:1.2rem;
+    padding:1rem;
+    padding-top: 0.5rem;
+    height: 2.5rem;
+    vertical-align: center;
+    border-radius: 10px;
+ }
+
+ #Signup:hover{
+    box-shadow: 0.5px 0.5px 0.5px 0.5px white;
+ }
+
+ #navbar{
+   opacity: 100%;
+   position:absolute;
+   top:0vh;
+ }
+
+ .btn2 {
+   position: relative;
+   display: inline-block;
+   padding: 10px 10px;
+   color: #ffd900;
+   font-size: 16px;
+   text-decoration: none;
+   text-transform: uppercase;
+   overflow: hidden;
+   transition: .5s;
+   margin-top: 1.4rem;
+ 
+   letter-spacing: 4px;
+   background-color: rgb(10, 10, 53);
+ }
+ 
+ .btn2:hover {
+   background: #ffd900;
+   color: #fff;
+   border-radius: 5px;
+   box-shadow: 0 0 5px #ffd900,
+     0 0 25px #ffd900,
+     0 0 50px #ffd900,
+     0 0 100px #ffd900;
+ }
+ 
+ .btn2 span {
+   position: absolute;
+   display: block;
+ }
+ 
+ .btn2 span:nth-child(1) {
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(90deg, transparent, #ffd900);
+   animation: btn-anim1 1s linear infinite;
+ }
+ 
+ .lowerDiv {
+   color: #ffffff;
+   margin-left: 20px;
+ }
+ 
+ @keyframes btn-anim1 {
+   0% {
+     left: -100%;
+   }
+ 
+   50%,
+   100% {
+     left: 100%;
+   }
+ }
+ 
+ .btn2 span:nth-child(2) {
+   top: -100%;
+   right: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(180deg, transparent, #ffd900);
+   animation: btn-anim2 1s linear infinite;
+   animation-delay: .25s
+ }
+ 
+ @keyframes btn-anim2 {
+   0% {
+     top: -100%;
+   }
+ 
+   50%,
+   100% {
+     top: 100%;
+   }
+ }
+ 
+ .btn2 a span:nth-child(3) {
+   bottom: 0;
+   right: -100%;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(270deg, transparent, #ffd900);
+   animation: btn-anim3 1s linear infinite;
+   animation-delay: .5s
+ }
+ 
+ @keyframes btn-anim3 {
+   0% {
+     right: -100%;
+   }
+ 
+   50%,
+   100% {
+     right: 100%;
+   }
+ }
+ 
+ .btn2 span:nth-child(4) {
+   bottom: -100%;
+   left: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(360deg, transparent, #ffd900);
+   animation: btn-anim4 1s linear infinite;
+   animation-delay: .75s
+ }
+ 
+ @keyframes btn-anim4 {
+   0% {
+     bottom: -100%;
+   }
+ 
+   50%,
+   100% {
+     bottom: 100%;
+   }
+ }
+ 
+ .anim-button {
+   top: 50%;
+   left: 30%;
+ }
+ @media (max-width: 1000px) {
+  #ul li{
+    display: none;
+  }
+}

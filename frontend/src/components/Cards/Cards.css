@@ -1,0 +1,160 @@
+h1 {
+  font-size: 3.2rem;
+  padding-top: 2rem;
+}
+
+h1 + p {
+  font-size: 1.8rem;
+  padding: 2rem 0 3rem;
+}
+
+.wrap {
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+  display: block;
+  cursor: pointer;
+  width: 15rem;
+}
+
+#image {
+  width: 100%;
+  background-size: contain;
+}
+
+.container {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+  position: relative;
+  border: 1px solid var(--background-color);
+  border-radius: 1.6rem;
+  padding: 0rem;
+  width: 15rem;
+  display: block;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+  transition: transform 0.6s 1s;
+}
+
+.container::before,
+.container::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #fff;
+  position: absolute;
+  z-index: 2;
+  opacity: 0.3;
+  transition: 0.3s;
+}
+
+.container::before {
+  top: 2rem;
+  right: 2rem;
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.container::after {
+  bottom: 2rem;
+  left: 2rem;
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+.container--active {
+  transition: none;
+}
+
+.container--1,
+.container--2,
+.container--3 {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1));
+}
+
+.wrap p {
+  font-size: 2.2rem;
+  text-align: center;
+  font-size: 2rem;
+  align-items: center;
+  color: white;
+}
+
+.wrap:hover .container::before,
+.wrap:hover .container::after {
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+}
+
+.abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: hsla(0, 0%, 0%, 0.6);
+  font-size: 1.6rem;
+}
+
+.container {
+  filter: none;
+  overflow: hidden;
+}
+
+.wrap p {
+  filter: none;
+  color: black;
+  position: relative;
+}
+
+.text {
+  background-color: #ffd900;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+h5{
+    font-size:0.3rem;
+    font-weight:200;
+}
+
+#btn{
+  margin-top: 0.2rem;
+  font-size: 1.8rem;
+  background-color: none;
+  margin:1rem;
+  margin-bottom:1.7rem;
+  z-index:10;
+  color:black;
+  border:1px solid black;
+  border-radius:10%;
+  padding-left:0.3rem;
+  padding-right:0.3rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  background: linear-gradient(0.25turn, #ffd900, #ebf8e1, #ffd900);
+}
+
+#btn:hover{
+  transform: scale(0.97);
+}
+
+#btn:active{
+  transform: scale(1);
+  transition-timing-function: ease-in-out;
+}
+
+.hide{
+  opacity:0;
+  filter: blur(5px);
+  transform:translateX(-100%);
+  transition:all 0.9s;
+}
+
+.show{
+  opacity:1;
+  filter:blur(0);
+  transform:translateX(0);
+}

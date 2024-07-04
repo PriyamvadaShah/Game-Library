@@ -1,0 +1,86 @@
+#lander {
+  font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  z-index: 2;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  height: 100vh;
+    animation: fadeInAnimation ease-in 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    50%{
+      opacity:0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+  #main{
+    color:#ffd900;
+    text-align:center;
+    font-size: 8rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-family: "Jaro", sans-serif;
+  font-weight:200;
+  }
+  #quotation{
+    text-align:center;
+    color:#ffd900;
+    font-size: 3rem;
+    z-index: 2;
+  }
+  #content{
+    text-align:center;
+    color:#ffd900;
+    font-size: 2rem;
+    z-index: 2;
+    margin-top:-10rem;
+  }
+
+  .hide{
+    opacity:0;
+    filter: blur(5px);
+    transform:translateX(-100%);
+    transition:all 1s;
+  }
+  
+  .show{
+    opacity:1;
+    filter:blur(0);
+    transform:translateX(0);
+  }
+
+  * {
+    box-sizing: border-box;
+
+  }
+  
+  .item {
+    width: 80vw;
+    text-align:center;
+    height: 300px;
+    margin: 50px auto ; 
+    padding-top: 75px;  
+    color: #FFF;
+    background: radial-gradient(#05081C, transparent);
+    font-size:1.5rem;
+    position: relative;
+  }
+
+ 
