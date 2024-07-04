@@ -12,7 +12,7 @@ const staticRoute = require("./routes/staticRouter");
 const userRoute = require("./routes/user");
 const app = express();
 app.use(cors());
-const PORT = process.env.PORT || 8001;
+const PORT = process.env.PORT;
 const bodyParser = require('body-parser');
 
 const server = http.createServer(app);
@@ -23,7 +23,7 @@ const io = new Server(server, {
   }
 });
 
-connectToMongoDB(process.env.MONGODB || "mongodb://127.0.0.1:27017/myapp").then(() =>
+connectToMongoDB(process.env.MONGODB_URI).then(() =>
   console.log("Mongodb connected")
 );
 
