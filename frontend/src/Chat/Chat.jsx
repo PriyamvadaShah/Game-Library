@@ -2,7 +2,7 @@ import"./Chat.css";
 import { io } from "socket.io-client";
 import { useEffect, useState } from "react";
 
-const socket = io.connect(SOCKET_SERVER);
+const socket = io.connect(import.meta.env.VITE_SOCKET_SERVER);
 
 function Chat() {
   const [room, setRoom] = useState("");
